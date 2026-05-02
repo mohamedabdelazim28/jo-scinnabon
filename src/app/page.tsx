@@ -25,7 +25,7 @@ export default function Home() {
     initial: { opacity: 0, y: 40 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true },
-    transition: { duration: 1, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 1, ease: [0.16, 1, 0.3, 1] as const },
   };
 
   return (
@@ -48,7 +48,7 @@ export default function Home() {
             style={{ x: textX }}
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] as const }}
             className="max-w-4xl"
           >
             <h1 className="text-[12vw] md:text-[10vw] font-serif leading-[0.85] text-white mix-blend-difference">
